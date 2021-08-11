@@ -1,0 +1,105 @@
+@import "colors";
+@import "media-queries";
+.seccion{
+    .seccion_container{
+        //esto permite utlizar rejillas
+        display:grid;
+        // definimos la cantidad de columnas y el tamaño de cada columna (ne esta caso 2 columnas con una dimension de 50% y 50%)
+        grid-template-columns: 1fr 1fr;
+
+        //cetra cada elemeto horizontalmente en cada columna
+        justify-items: center;
+
+       //un anchol 100% respecto a la pantalla
+       width: 100%;
+
+      @include tablet{
+          grid-template-columns: 1fr;
+        height: 100%;
+
+      }
+      .seccion_container--left{
+     //padding izquierda y derecha de 24px
+      padding:  1.5rem;
+     background-color: $rojo;
+          width: 100%;
+          text-align: center;
+          //una taño  de separacion de lineas deacuerdo a la medida de la fuente
+          line-height: 1.7rem;  
+        @include tablet{
+            padding:4rem 1.5rem;
+        }
+        @include mobile{
+            line-height:1.8rem;
+        }
+
+      }
+      .seccion_container--left h1{
+        font-size:2.7rem;
+        color: $claro;
+        //una taño  de separacion de lineas deacuerdo a la medida de la fuente
+         line-height: 2.5rem;
+        margin-bottom: 0.5rem;
+        @include tablet{
+            font-size:2.2rem;
+        }
+        @include mobile{
+            font-size:1.8rem;
+        }
+      }
+
+      .seccion_container--left p{
+        font-size:1.1rem;
+        color: $claro;
+        margin-bottom: 0.5rem;
+        @include tablet{
+            font-size:1.05rem;
+        }
+        @include mobile{
+            font-size:0.85rem;
+        }
+      }
+
+      .seccion_container--right{
+     //padding izquierda y derecha de 24px
+     padding:  1.5rem;
+     background-color: $crema;
+          width: 100%;
+          text-align: center;
+          //una taño  de separacion de lineas deacuerdo a la medida de la fuente
+          line-height: 1.7rem;  
+        @include tablet{
+            padding:4rem 1.5rem;
+        }
+        @include mobile{
+            line-height:1.8rem;
+        }
+      }
+      .seccion_container--right h1{
+          
+        font-size:2.7rem;
+        color: $rojo;
+        //una taño  de separacion de lineas deacuerdo a la medida de la fuente
+         line-height: 2.5rem;
+        margin-bottom: 0.5rem;
+        @include tablet{
+            font-size:2.2rem;
+        }
+        @include mobile{
+            font-size:1.8rem;
+        }
+      }
+
+      .seccion_container--right p{
+        font-size:1.1rem;
+        color: $rojo;
+        margin-bottom: 0.5rem;
+        @include tablet{
+            font-size:1.05rem;
+        }
+        @include mobile{
+            font-size:0.85rem;
+        }
+      }
+    }
+}

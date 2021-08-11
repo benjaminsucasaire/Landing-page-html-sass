@@ -1,0 +1,12 @@
+//para todoa medida menor a 768px
+@mixin tablet{
+    @media screen and (max-width:768px){
+        @content 
+    } 
+};
+//para todoa medida menor a 280px
+@mixin mobile{
+    @media screen and (max-width:280px){
+        @content 
+    } 
+}

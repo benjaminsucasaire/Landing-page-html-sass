@@ -1,0 +1,99 @@
+@import "colors";
+@import "media-queries";
+%align-center {
+  display: flex;
+  align-items: center;
+}
+.header{
+  width: 100%;
+  position:fixed;
+  .navbar {
+    background-color: $rojo;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem calc((100vw - 1200px) / 2);
+    z-index: 10;
+    //para que todos esten relativos a este padre
+    position: relative;
+   
+    .navbar_logo {
+      color: $claro;
+      text-decoration: none;
+      font-size: 2rem;
+      margin-left: 1.5rem;
+      //centrar verticalmente
+      @extend %align-center;
+      i{
+        padding: 0 0.125rem;
+        &:hover{
+          color:$oscuro; 
+      }
+       
+      }
+  
+    }
+    .navbar_bars {
+      //para que desaparesca tendra una opacasida de 0
+      opacity: 0;
+      @include tablet {
+        color: $claro;
+        //para que vuelva a aparecer tendra una opacity de 1
+        opacity: 1;
+        //para que tenga una posicion absoluta resepecto al padre
+        position: absolute;
+        //22px de espacio desde top hacia abajo
+        top: 22px;
+        //20px de espacio desde la deracha hacia a la izquierda (teniendo como posicion inicial la deracha)
+        right: 20px;
+        font-size: 2rem;
+      }
+    }
+  
+    .navbar_menu {
+      //centrar verticalmente
+      @extend %align-center;
+      list-style: none;
+      text-align: center;
+      margin-right: 1.5rem;
+      @include tablet {
+        //para que desaparesca
+        display: none;
+      }
+      .navbar_menu--links {
+        color: $claro;
+        //centrar verticalmente
+        @extend %align-center;
+        //para que este centrado cada elemento horizontalmente
+        justify-content: center;
+        //para quitar el subrayado inferior
+        text-decoration: none;
+        //para tener una separacion izquier y derech de 16px
+        padding: 0 1rem;
+  
+        &:hover {
+          color: $oscuro;
+          // para que el hover tenga un tiempo de 300ms  en tener todos sus estilos
+          transition: all 300ms;
+        }
+      }
+      #button{
+        padding:0.9rem 1.5rem;
+        border-radius: 0.5rem;
+        background-color:$crema;
+        margin-left: 1rem;
+        color: $oscuro;
+        //para darle ancho al texto
+        font-weight: bold;
+        &:hover{
+           background-color:$oscuro;
+           color:$crema;
+             // para que el hover tenga un tiempo de 300ms  en tener todos sus estilos
+          transition: all 300ms;
+        }
+      }
+     //24:47
+    }
+  }
+  
+}

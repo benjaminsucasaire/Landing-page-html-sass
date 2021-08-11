@@ -1,0 +1,14 @@
+@import "colors";
+@import "media-queries";
+.footer{
+           //un anchol 100% respecto a la pantalla
+           width: 100%;
+ .footer_container{
+     background-color: $oscuro;
+     p{
+         padding:1rem 1.5rem;
+         color:$claro;
+         text-align:center;
+     }
+ }          
+}
